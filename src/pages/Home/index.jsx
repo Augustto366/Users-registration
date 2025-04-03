@@ -24,6 +24,7 @@ function Home() {
   };
 
   async function createUsers() {
+
     await api.post('/users', {
       name: inputName.current.value,
       age: inputAge.current.value,
@@ -40,6 +41,7 @@ function Home() {
     setTimeout(() => {
       setClick(true);
     }, 1000);
+
   }
 
   async function deleteUsers(id) {
@@ -84,7 +86,8 @@ function Home() {
             </button>
           </div>
         ))}
-        {del && <CardRemove/>}
+        {del && <CardRemove />}
+        {}
       </div>
     </>
   )

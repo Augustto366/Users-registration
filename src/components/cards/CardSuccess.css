@@ -31,3 +31,72 @@ p {
   }
 }
 
+@media screen and (max-width: 450px){
+  .notifications-container {
+    max-width: 80%;
+  }
+}
+
+.outer {
+  position: absolute;
+  margin: auto;
+  width: 20px;
+  cursor: pointer;
+  left: 90%;
+}
+
+.inner {
+  width: inherit;
+  text-align: center;
+}
+
+label { 
+  font-size: .6em; 
+  line-height: 3em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.inner:before, .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #a007ff;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.outer:hover label {
+  opacity: 1;
+}
+
+.outer:hover .inner:before,
+.outer:hover .inner:after {
+  transform: rotate(0);
+}
+
+.outer:hover .inner:before {
+  top: 0;
+}
+
+.outer:hover .inner:after {
+  bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
